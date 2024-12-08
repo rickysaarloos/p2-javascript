@@ -25,9 +25,9 @@ document.getElementById("div").addEventListener("click", function() {
 });
 
 document.addEventListener("keydown", function(event)  {
-if (event.key === "ArrowLeft") {
+if (event.key === 'a') {
     positie -= 10;
-} else if (event.key === "ArrowRight") {
+} else if (event.key === 'd') {
 
  positie += 10;   
 }
