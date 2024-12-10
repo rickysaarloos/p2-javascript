@@ -1,5 +1,5 @@
 let div = document.getElementById('div')
-
+let topPosition = 0;
 let positie = 0;
 let schermbreedte = window.innerWidth
 
@@ -12,8 +12,11 @@ setInterval(function() {
     
 }, 100);
 
+function updatePosition() {
+    myDiv.style.top = topPosition + 'px';
+  }
 
-let currentColorIndex = 0;
+  
 let colors = ["red", "blue", "green", "yellow", "purple"];
 
 
@@ -42,5 +45,21 @@ div.style.left = positie + 'px'
 
 
 
+
+document.addEventListener("keydown", function(event)  {
+if (event.key === 'w') {
+   topPositie += 10;
+} else if (event.key === 's') {
+
+    topPositie -= 10;   
+}
+
+if (positie < 0) {
+    positie = 0;
+} else if (positie > schermbreedte) {
+    positie = schermbreedte;
+}
+div.style.top = topPosition + 'px'
+})
 
 
